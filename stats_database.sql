@@ -113,7 +113,7 @@ DROP TABLE IF EXISTS `stats_heatmaps`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stats_heatmaps` (
   `steamid` varchar(32) NOT NULL,
-  `timestamp` int(11) NOT NULL DEFAULT unix_timestamp(),
+  `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   `map` varchar(64) NOT NULL,
   `type` smallint(6) NOT NULL,
   `x` int(11) DEFAULT NULL,
